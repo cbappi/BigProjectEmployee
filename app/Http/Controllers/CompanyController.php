@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Helper\ResponseHelper;
 use App\Models\Company;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 class CompanyController extends Controller
 {
@@ -15,6 +16,14 @@ class CompanyController extends Controller
     function CompanyList(Request $request){
         //$user_id=$request->header('id');
         return Company::all();
+    }
+
+
+    public function CompanyView():JsonResponse
+    {
+        $data = Company::take(4)->get();
+        //$data= Company::all();
+        return  ResponseHelper::Out('success',$data,200);
     }
 
     function CompanyCreate(Request $request){

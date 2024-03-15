@@ -19,6 +19,33 @@ class UserController extends Controller
         return view('pages.auth.login-page');
     }
 
+    //Route::get('/userLogin',[UserController::class,'LoginPage']);
+
+    function UserLogin(Request $request){
+        $count=User::where('email','=',$request->input('email'))
+             ->where('password','=',$request->input('password'))
+             ->select('id')->first();
+
+        if($count!==null){
+            // User Login-> JWT Token Issue
+            $token=JWTToken::CreateToken($request->input('email'),$count->id);
+            return response()->json([
+                'status' => 'success',
+                'message' => 'User Login Successful',
+                'token' => $token,
+            ],200)->cookie('token',$token,time()+60*24*30);
+        }
+        else{
+            return response()->json([
+                'status' => 'failed',
+                'message' => 'unauthorizedddd'
+            ],200);
+
+        }
+
+     }
+
+     //Route::post('/user-login',[UserController::class,'UserLogin']);
     function RegistrationPage():View{
         return view('pages.auth.registration-page');
     }
@@ -63,29 +90,6 @@ class UserController extends Controller
         }
     }
 
-    function UserLogin(Request $request){
-       $count=User::where('email','=',$request->input('email'))
-            ->where('password','=',$request->input('password'))
-            ->select('id')->first();
-
-       if($count!==null){
-           // User Login-> JWT Token Issue
-           $token=JWTToken::CreateToken($request->input('email'),$count->id);
-           return response()->json([
-               'status' => 'success',
-               'message' => 'User Login Successful',
-               'token' => $token,
-           ],200)->cookie('token',$token,time()+60*24*30);
-       }
-       else{
-           return response()->json([
-               'status' => 'failed',
-               'message' => 'unauthorizedddd'
-           ],200);
-
-       }
-
-    }
 
     function SendOTPCode(Request $request){
 

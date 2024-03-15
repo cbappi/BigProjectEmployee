@@ -17,20 +17,20 @@ class DashboardControllerAdmin extends Controller
 
     function Summary(Request $request):array{
 
-        $user_id=$request->header('id');
+        //$user_id=$request->header('id');
 
 
-        $jobpulse= Jobpulse::where('user_id',$user_id)->count();
-        $product= Product::where('user_id',$user_id)->count();
-        $Category= Category::where('user_id',$user_id)->count();
-        $Customer=Customer::where('user_id',$user_id)->count();
-        $Invoice= Invoice::where('user_id',$user_id)->count();
-        $total=  Invoice::where('user_id',$user_id)->sum('total');
-        $vat= Invoice::where('user_id',$user_id)->sum('vat');
-        $payable =Invoice::where('user_id',$user_id)->sum('payable');
+
+        $product= Product::where('id')->count();
+        $Category= Category::where('id')->count();
+        $Customer=Customer::where('id')->count();
+        $Invoice= Invoice::where('id')->count();
+        $total=  Invoice::where('id')->sum('total');
+        $vat= Invoice::where('id')->sum('vat');
+        $payable =Invoice::where('id')->sum('payable');
 
         return[
-            'jobpulse'=> $jobpulse,
+
             'product'=> $product,
             'category'=> $Category,
             'customer'=> $Customer,

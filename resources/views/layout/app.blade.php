@@ -3,16 +3,22 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>X-Bakery</title>
-    <link rel="icon" type="image/x-icon" href="{{asset('/favicon.ico')}}" />
+    <title>JOBPULSE</title>
+    <link rel="icon" type="image/x-icon" href="{{asset('/JOB.JPG')}}" />
     <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" />
     <link href="{{asset('css/animate.min.css')}}" rel="stylesheet" />
     <link href="{{asset('css/fontawesome.css')}}" rel="stylesheet" />
     <link href="{{asset('css/style.css')}}" rel="stylesheet" />
     <link href="{{asset('css/toastify.min.css')}}" rel="stylesheet" />
-    <script src="{{asset('js/toastify-js.js')}}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="{{asset('js/jquery-3.7.0.min.js')}}"></script>
     <script src="{{asset('js/axios.min.js')}}"></script>
+
+    <script src="{{asset('js/toastify-js.js')}}"></script>
+
     <script src="{{asset('js/config.js')}}"></script>
+
+
 </head>
 
 <body>
@@ -26,11 +32,14 @@
 <div>
     @yield('content')
 </div>
-<script>
+<script src="{{asset('assets/js/scripts.js')}}"></script>
+<script src="{{asset('assets/js/magnific-popup.min.js')}}"></script>
+<script src="{{asset('assets/js/popper.min.js')}}"></script>
+<script src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
 
-</script>
 
-<script src="{{asset('js/bootstrap.bundle.js')}}"></script>
+
+
 
 </body>
 </html>

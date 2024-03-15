@@ -17,6 +17,10 @@ class JobpulseController extends Controller
         return view('pages.auth.admin-login-page');
     }
 
+    //Page Routes
+//Route::get('/admin/login',[JobpulseController::class,'AdminLogin']);
+
+
 
 
 
@@ -43,5 +47,7 @@ function UserLogin(Request $request){
     }
 
  }
+
+
 
 }

@@ -45,7 +45,9 @@
             <span class="icon-nav m-0 h5" onclick="MenuBarClickHandler()">
                 <img class="nav-logo-sm mx-2"  src="{{asset('images/menu.svg')}}" alt="logo"/>
             </span>
-            <img class="nav-logo  mx-2"  src="{{asset('images/logo.png')}}" alt="logo"/>
+            <a class="navbar-brand" href="#">
+                <img class="img-fluid" src="{{asset('/images/JOB.JPG')}}" alt="LobPulse" width="200px">
+            </a>
         </a>
 
         <div class="float-right h-auto d-flex">
@@ -77,45 +79,11 @@
         <span class="side-bar-item-caption">Dashboard Employer</span>
     </a>
 
-    <a href="{{url("/customerPage")}}" class="side-bar-item">
+    <a href="{{url("/jobPage")}}" class="side-bar-item">
         <i class="bi bi-people"></i>
-        <span class="side-bar-item-caption">Customer</span>
+        <span class="side-bar-item-caption">Jobs</span>
     </a>
 
-    <a href="{{url("/companyPage")}}" class="side-bar-item">
-        <i class="bi bi-people"></i>
-        <span class="side-bar-item-caption">Companies</span>
-    </a>
-
-    <a href="{{url("/employeePage")}}" class="side-bar-item">
-        <i class="bi bi-people"></i>
-        <span class="side-bar-item-caption">Employee</span>
-    </a>
-
-    <a href="{{url("/categoryPage")}}" class="side-bar-item">
-        <i class="bi bi-list-nested"></i>
-        <span class="side-bar-item-caption">Category</span>
-    </a>
-
-    <a href="{{url("/productPage")}}" class="side-bar-item">
-        <i class="bi bi-bag"></i>
-        <span class="side-bar-item-caption">Product</span>
-    </a>
-
-    <a href="{{url('/salePage')}}" class="side-bar-item">
-        <i class="bi bi-currency-dollar"></i>
-        <span class="side-bar-item-caption">Create Sale</span>
-    </a>
-
-    <a href="{{url('/invoicePage')}}" class="side-bar-item">
-        <i class="bi bi-receipt"></i>
-        <span class="side-bar-item-caption">Invoice</span>
-    </a>
-
-    <a href="{{url('/reportPage')}}" class="side-bar-item">
-        <i class="bi bi-file-earmark-bar-graph"></i>
-        <span class="side-bar-item-caption">Report</span>
-    </a>
 
 
 </div>

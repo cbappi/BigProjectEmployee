@@ -45,7 +45,9 @@
             <span class="icon-nav m-0 h5" onclick="MenuBarClickHandler()">
                 <img class="nav-logo-sm mx-2"  src="{{asset('images/menu.svg')}}" alt="logo"/>
             </span>
-            <img class="nav-logo  mx-2"  src="{{asset('images/logo.png')}}" alt="logo"/>
+            <a class="navbar-brand" href="#">
+                <img class="img-fluid" src="{{asset('/images/JOB.JPG')}}" alt="LobPulse" width="200px">
+            </a>
         </a>
 
         <div class="float-right h-auto d-flex">
@@ -72,9 +74,9 @@
 
 <div id="sideNavRef" class="side-nav-open">
 
-    <a href="{{url("/dashboard")}}" class="side-bar-item">
+    <a href="{{url("/dashboard-admin")}}" class="side-bar-item">
         <i class="bi bi-graph-up"></i>
-        <span class="side-bar-item-caption">Dashboard</span>
+        <span class="side-bar-item-caption">Dashboard Super Admin</span>
     </a>
 
     <a href="{{url("/customerPage")}}" class="side-bar-item">

@@ -12,6 +12,7 @@
                                 <label class="form-label">Category Name *</label>
                                 <input type="text" class="form-control" id="categoryName">
                             </div>
+
                         </div>
                     </div>
                     </form>

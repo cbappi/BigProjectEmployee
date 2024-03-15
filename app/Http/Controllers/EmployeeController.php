@@ -17,6 +17,16 @@ class EmployeeController extends Controller
         return Employee::all();
     }
 
+    public function EmployeeView()
+    {
+        $employees = Employee::all();
+        return view('pages.employee-page', compact('employees'));
+    }
+
+
+
+
+
     function EmployeeCreate(Request $request){
         $user_id=$request->header('id');
         return Employee::create([

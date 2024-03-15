@@ -20,16 +20,16 @@ class DashboardControllerEmployee extends Controller
         $user_id=$request->header('id');
 
 
-        $product= Product::where('user_id',$user_id)->count();
-        $Category= Category::where('user_id',$user_id)->count();
-        $Customer=Customer::where('user_id',$user_id)->count();
+        // $product= Product::where('user_id',$user_id)->count();
+        // $Category= Category::where('user_id',$user_id)->count();
+        // $Customer=Customer::where('user_id',$user_id)->count();
 
 
         return[
 
-            'product'=> $product,
-            'category'=> $Category,
-            'customer'=> $Customer
+            // 'product'=> $product,
+            // 'category'=> $Category,
+            // 'customer'=> $Customer
 
         ];
 

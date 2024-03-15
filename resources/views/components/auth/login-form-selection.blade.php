@@ -7,7 +7,7 @@
                     <h4><a class="text-center ms-3 h6" href="{{url('/userLogin')}}">Login as Employer</a></h4>
                     <br/>
 
-                    <h4><a class="text-center ms-3 h6" href=#>Login as Candidate</a></h4>
+                    <h4><a class="text-center ms-3 h6" href="{{url('/candidateLogin')}}">Login as Candidate</a></h4>
 
                 </div>
             </div>

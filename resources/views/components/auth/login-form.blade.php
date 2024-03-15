@@ -3,7 +3,7 @@
         <div class="col-md-7 animated fadeIn col-lg-6 center-screen">
             <div class="card w-90  p-4">
                 <div class="card-body">
-                    <h4>SIGN IN</h4>
+                    <h4>SIGN IN EMP</h4>
                     <br/>
                     <input id="email" placeholder="User Email" class="form-control" type="email"/>
                     <br/>

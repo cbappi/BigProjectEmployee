@@ -5,7 +5,7 @@
     <nav class="navbar sticky-top shadow-sm navbar-expand-lg navbar-light py-2">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img class="img-fluid" src="{{asset('/images/logo.png')}}" alt="" width="96px">
+                <img class="img-fluid" src="{{asset('/images/JOB.JPG')}}" alt="LobPulse" width="200px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header01" aria-controls="header01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,6 +23,37 @@
             </div>
         </div>
     </nav>
+
+
+
+
+    @include('components.category.category-part-ajax');
+    @include('components.Job.ByJobList')
+@include('components.company.company-part');
+@include('components.Job.job-list-front');
+@include('components.ExclusiveJobs')
+
+
+
+
+
+
+
+
+
+
+
+
+{{--
+    Employee start --}}
+
+
+{{--
+    Employee end --}}
+
+
+
+
 
 
         <section class="pb-5">
@@ -143,5 +174,17 @@
                 <p class="text-center">All rights reserved © Learn with Rabbil (LWR) 2023-2024</p>
             </div>
         </footer>
+
+        <script>
+            (async () => {
+
+                await Hero();
+
+                $(".preloader").delay(90).fadeOut(100).addClass('loaded');
+
+
+
+            })()
+        </script>
 
 @endsection
